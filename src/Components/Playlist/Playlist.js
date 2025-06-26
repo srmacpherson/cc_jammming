@@ -1,11 +1,26 @@
 import React from "react";
+import styles from "./Playlist.module.css";
+import Tracklist from "../Tracklist/Tracklist";
 
-function Playlist() {
+function Playlist(props) {
+
+  function handleNameChange(event) {
+    props.onNameChange(event.target.value);
+  }
+
   return (
-    <div className="Playlist">
-      <input defaultValue={"New Playlist"} />
+    <div className={styles.Playlist}>
+      <input 
+      defaultValue={"New Playlist"} onChange={handleNameChange} 
+      />
       {/* <!-- Add a TrackList component --> */}
-      <button className="Playlist-save">
+      <Tracklist 
+      userSearchResults={props.playlistTracks} 
+      onAdd={props.onAdd}
+      onRemove={props.onRemove}
+      isRemoval={true} 
+      />
+      <button className={styles["Playlist-save"]} onClick={props.onSave}>
         SAVE TO SPOTIFY
       </button>
     </div>
