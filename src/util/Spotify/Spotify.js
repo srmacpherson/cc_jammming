@@ -1,5 +1,5 @@
 const clientID = 'e661d051136f41029689837a26b6eaf2';
-const redirectURI = 'https://a993-2a00-23c8-3a9d-c001-10c0-fdc3-2f90-8a9a.ngrok-free.app';
+const redirectURI = 'https://localhost:3000/'; // Change this to your app's redirect URI
 let accessToken = '';
 
 const Spotify = {
