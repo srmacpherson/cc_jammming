@@ -1,5 +1,5 @@
 const clientID = 'e661d051136f41029689837a26b6eaf2';
-const redirectURI = 'https://localhost:3000/'; // Change this to your app's redirect URI
+const redirectURI = 'https://codecademyjammmingproject.netlify.app/'
 let accessToken = '';
 
 const Spotify = {
